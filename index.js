@@ -6,8 +6,10 @@ function GasStation(strArr) {
   
     for (let i = 1; i <= N; i++) {
       const [g, c] = strArr[i].split(':').map(Number);
-      all += g - c;
-      current += g - c;
+
+      let diffrence = g - c;
+      all += diffrence;
+      current += diffrence;
   
       if (current < 0) {
         startStation = i;
